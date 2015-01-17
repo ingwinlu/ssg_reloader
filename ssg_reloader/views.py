@@ -1,5 +1,6 @@
 from ssg_reloader import app
 from flask import jsonify, redirect
+from urllib import url2pathname
 import os
 
 from utils import inject_js
@@ -13,9 +14,10 @@ def ssg_reload():
 def serve(path):
     if path.endswith("/"):
         path = path + "index.html"
+    path = url2pathname(path)
     if path.endswith("html"):
+        file_path = os.path.join(app._static_folder, path[1:])
         #this will be terrible slow
-        file_path = os.path.join(app._static_folder, path)
         return inject_js(file_path)
     else:
         return app.send_static_file(path)
