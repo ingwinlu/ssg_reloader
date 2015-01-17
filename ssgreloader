@@ -8,6 +8,7 @@ if __name__ == '__main__':
     watchdog = utils.watchdog_generator(args.root_directory)
     watchdog.next() #remove first positive
 
+    app._inject_timeout = args.timeout
     app._static_folder = os.path.abspath(args.root_directory)
     app._watchdog = watchdog
 

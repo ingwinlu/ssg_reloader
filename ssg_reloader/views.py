@@ -20,9 +20,8 @@ def serve(path):
     if path.endswith("html"):
         file_path = os.path.join(app._static_folder, path)
         #this will be terrible slow
-        return inject_js(file_path)
+        return inject_js(html_path=file_path, timeout=app._inject_timeout)
     else:
         return app.send_static_file(path)
     return redirect("/", code=302)
-
 
