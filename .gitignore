@@ -8,6 +8,6 @@ pip-selfcheck.json
 test/
 
 #python
-
+dist/
 *.pyc
 
