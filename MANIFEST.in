@@ -1,0 +1,4 @@
+prune bin
+prune include
+prune lib
+prune test

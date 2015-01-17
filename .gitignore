@@ -1,0 +1,13 @@
+#virtualenv
+bin/
+include/
+lib/
+pip-selfcheck.json
+
+#test
+test/
+
+#python
+
+*.pyc
+
