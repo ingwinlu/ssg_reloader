@@ -1,7 +1,7 @@
 ssg_reloader
 ============
 
-Serves Files statically via http, detects file changes, injects js code to check for changes and forces browser to reload
+ssg_reloader is a static site generation development server, which injects js into html to force browser reloads on file changes.
 
 ##Usage
 `ssgreloader -h`
