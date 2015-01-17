@@ -5,7 +5,7 @@ upstream = 'https://github.com/ingwinlu/ssg_reloader'
 setup(
     name='ssg_reloader',
     description='simple webserver, injects js into html sites that reloads sites when source is changed',
-    version='0.1.0',
+    version='0.1.1',
     url=upstream,
     packages=['ssg_reloader'],
     package_data={

@@ -15,8 +15,10 @@ def serve(path):
     if path.endswith("/"):
         path = path + "index.html"
     path = url2pathname(path)
+    if path.startswith("/"):
+        path=path[1:]
     if path.endswith("html"):
-        file_path = os.path.join(app._static_folder, path[1:])
+        file_path = os.path.join(app._static_folder, path)
         #this will be terrible slow
         return inject_js(file_path)
     else:
