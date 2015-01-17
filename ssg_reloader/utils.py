@@ -7,7 +7,7 @@ def get_args():
     parser = argparse.ArgumentParser(description= "Static Site Generator - Reloader")
     parser.add_argument("root_directory", help="root directory of the files to serve")
     parser.add_argument("-i", "--ip", nargs="?", default="127.0.0.1", help="ip address on which to serve [127.0.0.1]")
-    parser.add_argument("-p", "--port", nargs="?", default=5000, help="port on which to serve [5000]")
+    parser.add_argument("-p", "--port", nargs="?", type=int, default=5000, help="port on which to serve [5000]")
     parser.add_argument("-d", "--debug", action='store_true', help="Start Flask App in Debug mode")
     return parser.parse_args()
 

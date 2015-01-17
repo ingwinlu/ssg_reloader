@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-upstream = 'https://github.com/ingwinlu/simpleMediaCenter'
+upstream = 'https://github.com/ingwinlu/ssg_reloader'
 
 setup(
     name='ssg_reloader',
@@ -11,7 +11,7 @@ setup(
     package_data={
             '' : ['LICENSE','README.md']
     },
-    scripts=['simpleMC'],
+    scripts=['ssgreloader'],
     requires = [
         'beautifulsoup4',
         'Flask',
