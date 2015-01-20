@@ -7,10 +7,11 @@ ssg_reloader is a static site generation development server, which injects js in
 `ssgreloader -h`
 
 ###Example
-`/ssgreloader -i 0.0.0.0 -p 5000 -d test/test_data/`
+`/ssgreloader -i 0.0.0.0 -p 5000 -t 3000 -d test/test_data/`
 * `-i 0.0.0.0` accept connections on all ip addresses
 * `-p 5000` run on port 5000
 * `-d` enable debugging information
+* `-t 3000` timeout between ajax requests
 * `test/test_data/` root directory to serve via http
 
 ##Installation
