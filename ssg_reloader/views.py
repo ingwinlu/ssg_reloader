@@ -9,14 +9,12 @@ from utils import inject_js
 def ssg_reload():
     return jsonify(reload=app._watchdog.next())
 
-@app.route("/", defaults={"path": "/"})
+@app.route("/", defaults={"path": "index.html"})
 @app.route("/<path:path>")
 def serve(path):
     if path.endswith("/"):
         path = path + "index.html"
     path = url2pathname(path)
-    if path.startswith("/"):
-        path=path[1:]
     if path.endswith("html"):
         file_path = os.path.join(app._static_folder, path)
         #this will be terrible slow
